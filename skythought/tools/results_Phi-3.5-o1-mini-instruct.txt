@@ -1,0 +1,27 @@
+
+Running eval: AIME with command ['python', 'inference_and_check.py', '--model', '/storage/abdulw/SkyThought/skythought/train/LLaMA-Factory/outputs/phi3/full/original/checkpoint-20800', '--dataset', 'AIME', '--split', 'train', '--tp', '2']
+Traceback (most recent call last):
+  File "/storage/abdulw/SkyThought/skythought/tools/inference_and_check.py", line 330, in <module>
+    main()
+  File "/storage/abdulw/SkyThought/skythought/tools/inference_and_check.py", line 310, in main
+    result_file = os.path.join(args.result_dir, f"{MODEL_TO_NAME[args.model]}_{args.dataset}_{args.split}_{args.source}_{args.start}_{args.end}.json")
+KeyError: '/storage/abdulw/SkyThought/skythought/train/LLaMA-Factory/outputs/phi3/full/original/checkpoint-20800'
+Error occurred while running eval AIME: Command '['python', 'inference_and_check.py', '--model', '/storage/abdulw/SkyThought/skythought/train/LLaMA-Factory/outputs/phi3/full/original/checkpoint-20800', '--dataset', 'AIME', '--split', 'train', '--tp', '2']' returned non-zero exit status 1.
+
+Running eval: MATH500 with command ['python', 'inference_and_check.py', '--model', '/storage/abdulw/SkyThought/skythought/train/LLaMA-Factory/outputs/phi3/full/original/checkpoint-20800', '--dataset', 'MATH500', '--split', 'test', '--tp', '2']
+Traceback (most recent call last):
+  File "/storage/abdulw/SkyThought/skythought/tools/inference_and_check.py", line 330, in <module>
+    main()
+  File "/storage/abdulw/SkyThought/skythought/tools/inference_and_check.py", line 310, in main
+    result_file = os.path.join(args.result_dir, f"{MODEL_TO_NAME[args.model]}_{args.dataset}_{args.split}_{args.source}_{args.start}_{args.end}.json")
+KeyError: '/storage/abdulw/SkyThought/skythought/train/LLaMA-Factory/outputs/phi3/full/original/checkpoint-20800'
+Error occurred while running eval MATH500: Command '['python', 'inference_and_check.py', '--model', '/storage/abdulw/SkyThought/skythought/train/LLaMA-Factory/outputs/phi3/full/original/checkpoint-20800', '--dataset', 'MATH500', '--split', 'test', '--tp', '2']' returned non-zero exit status 1.
+
+Running eval: GPQADiamond with command ['python', 'inference_and_check.py', '--model', '/storage/abdulw/SkyThought/skythought/train/LLaMA-Factory/outputs/phi3/full/original/checkpoint-20800', '--dataset', 'GPQADiamond', '--split', 'train', '--tp', '2']
+Traceback (most recent call last):
+  File "/storage/abdulw/SkyThought/skythought/tools/inference_and_check.py", line 330, in <module>
+    main()
+  File "/storage/abdulw/SkyThought/skythought/tools/inference_and_check.py", line 310, in main
+    result_file = os.path.join(args.result_dir, f"{MODEL_TO_NAME[args.model]}_{args.dataset}_{args.split}_{args.source}_{args.start}_{args.end}.json")
+KeyError: '/storage/abdulw/SkyThought/skythought/train/LLaMA-Factory/outputs/phi3/full/original/checkpoint-20800'
+Error occurred while running eval GPQADiamond: Command '['python', 'inference_and_check.py', '--model', '/storage/abdulw/SkyThought/skythought/train/LLaMA-Factory/outputs/phi3/full/original/checkpoint-20800', '--dataset', 'GPQADiamond', '--split', 'train', '--tp', '2']' returned non-zero exit status 1.

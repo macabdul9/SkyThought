@@ -1,0 +1,60 @@
+
+Running eval: AIME with command ['python', 'inference_and_check.py', '--model', 'Qwen/QwQ-32B-Preview', '--dataset', 'AIME', '--split', 'train', '--tp', '8']
+Results will be saved to ./
+INFO 01-19 08:46:05 config.py:899] Defaulting to use ray for distributed inference
+2025-01-19 08:46:06,556	INFO worker.py:1821 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/storage/abdulw/SkyThought/skythought/tools/inference_and_check.py", line 330, in <module>
+    main()
+  File "/storage/abdulw/SkyThought/skythought/tools/inference_and_check.py", line 325, in main
+    llm = OpenAI() if args.model.startswith("openai") else LLM(model=args.model, tensor_parallel_size=args.tp)
+  File "/storage/abdulw/miniconda3/envs/venv310/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 214, in __init__
+    self.llm_engine = LLMEngine.from_engine_args(
+  File "/storage/abdulw/miniconda3/envs/venv310/lib/python3.10/site-packages/vllm/engine/llm_engine.py", line 562, in from_engine_args
+    executor_class = cls._get_executor_cls(engine_config)
+  File "/storage/abdulw/miniconda3/envs/venv310/lib/python3.10/site-packages/vllm/engine/llm_engine.py", line 537, in _get_executor_cls
+    initialize_ray_cluster(engine_config.parallel_config)
+  File "/storage/abdulw/miniconda3/envs/venv310/lib/python3.10/site-packages/vllm/executor/ray_utils.py", line 270, in initialize_ray_cluster
+    raise ValueError(
+ValueError: The number of required GPUs exceeds the total number of available GPUs in the placement group.
+Error occurred while running eval AIME: Command '['python', 'inference_and_check.py', '--model', 'Qwen/QwQ-32B-Preview', '--dataset', 'AIME', '--split', 'train', '--tp', '8']' returned non-zero exit status 1.
+
+Running eval: MATH500 with command ['python', 'inference_and_check.py', '--model', 'Qwen/QwQ-32B-Preview', '--dataset', 'MATH500', '--split', 'test', '--tp', '8']
+Results will be saved to ./
+INFO 01-19 08:46:14 config.py:899] Defaulting to use ray for distributed inference
+2025-01-19 08:46:16,028	INFO worker.py:1821 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/storage/abdulw/SkyThought/skythought/tools/inference_and_check.py", line 330, in <module>
+    main()
+  File "/storage/abdulw/SkyThought/skythought/tools/inference_and_check.py", line 325, in main
+    llm = OpenAI() if args.model.startswith("openai") else LLM(model=args.model, tensor_parallel_size=args.tp)
+  File "/storage/abdulw/miniconda3/envs/venv310/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 214, in __init__
+    self.llm_engine = LLMEngine.from_engine_args(
+  File "/storage/abdulw/miniconda3/envs/venv310/lib/python3.10/site-packages/vllm/engine/llm_engine.py", line 562, in from_engine_args
+    executor_class = cls._get_executor_cls(engine_config)
+  File "/storage/abdulw/miniconda3/envs/venv310/lib/python3.10/site-packages/vllm/engine/llm_engine.py", line 537, in _get_executor_cls
+    initialize_ray_cluster(engine_config.parallel_config)
+  File "/storage/abdulw/miniconda3/envs/venv310/lib/python3.10/site-packages/vllm/executor/ray_utils.py", line 270, in initialize_ray_cluster
+    raise ValueError(
+ValueError: The number of required GPUs exceeds the total number of available GPUs in the placement group.
+Error occurred while running eval MATH500: Command '['python', 'inference_and_check.py', '--model', 'Qwen/QwQ-32B-Preview', '--dataset', 'MATH500', '--split', 'test', '--tp', '8']' returned non-zero exit status 1.
+
+Running eval: GPQADiamond with command ['python', 'inference_and_check.py', '--model', 'Qwen/QwQ-32B-Preview', '--dataset', 'GPQADiamond', '--split', 'train', '--tp', '8']
+Results will be saved to ./
+INFO 01-19 08:46:24 config.py:899] Defaulting to use ray for distributed inference
+2025-01-19 08:46:25,621	INFO worker.py:1821 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/storage/abdulw/SkyThought/skythought/tools/inference_and_check.py", line 330, in <module>
+    main()
+  File "/storage/abdulw/SkyThought/skythought/tools/inference_and_check.py", line 325, in main
+    llm = OpenAI() if args.model.startswith("openai") else LLM(model=args.model, tensor_parallel_size=args.tp)
+  File "/storage/abdulw/miniconda3/envs/venv310/lib/python3.10/site-packages/vllm/entrypoints/llm.py", line 214, in __init__
+    self.llm_engine = LLMEngine.from_engine_args(
+  File "/storage/abdulw/miniconda3/envs/venv310/lib/python3.10/site-packages/vllm/engine/llm_engine.py", line 562, in from_engine_args
+    executor_class = cls._get_executor_cls(engine_config)
+  File "/storage/abdulw/miniconda3/envs/venv310/lib/python3.10/site-packages/vllm/engine/llm_engine.py", line 537, in _get_executor_cls
+    initialize_ray_cluster(engine_config.parallel_config)
+  File "/storage/abdulw/miniconda3/envs/venv310/lib/python3.10/site-packages/vllm/executor/ray_utils.py", line 270, in initialize_ray_cluster
+    raise ValueError(
+ValueError: The number of required GPUs exceeds the total number of available GPUs in the placement group.
+Error occurred while running eval GPQADiamond: Command '['python', 'inference_and_check.py', '--model', 'Qwen/QwQ-32B-Preview', '--dataset', 'GPQADiamond', '--split', 'train', '--tp', '8']' returned non-zero exit status 1.

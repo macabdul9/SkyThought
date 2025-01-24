@@ -4,6 +4,31 @@ SYSTEM_PROMPT = {
     "Qwen/Qwen2.5-72B-Instruct": "You are a helpful and harmless assistant. You are Qwen developed by Alibaba. You should think step-by-step.",
     "Qwen/Qwen2.5-32B-Instruct": "You are a helpful and harmless assistant. You are Qwen developed by Alibaba. You should think step-by-step.",
     "Qwen/Qwen2.5-7B-Instruct": "You are a helpful and harmless assistant. You are Qwen developed by Alibaba. You should think step-by-step.",
+    "Qwen/Qwen2.5-1.5B-Instruct": "You are a helpful and harmless assistant. You are Qwen developed by Alibaba. You should think step-by-step.",
+    "Qwen/Qwen2.5-Math-7B-Instruct": "You are a helpful and harmless assistant. You are Qwen developed by Alibaba. You should think step-by-step.",
+    "PRIME-RL/Eurus-2-7B-PRIME": """When tackling complex reasoning tasks, you have access to the following actions. Use them as needed to progress through your thought process. After each action, determine and state the next most appropriate action to take.
+
+Actions:
+
+{actions}
+
+Your action should contain multiple steps, and each step starts with #. After each action (except OUTPUT), state which action you will take next with ''Next action: [Your action]'' and finish this turn. Continue this process until you reach a satisfactory conclusion or solution to the problem at hand, at which point you should use the [OUTPUT] action. The thought process is completely invisible to user, so [OUTPUT] should be a complete response. You should strictly follow the format below:
+
+[ACTION NAME]
+
+# Your action step 1
+
+# Your action step 2
+
+# Your action step 3
+
+...
+
+Next action: [NEXT ACTION NAME]
+
+
+Now, begin with the [ASSESS] action for the following task:
+""",
     "NovaSky-AI/Sky-T1-32B-Preview": "Your role as an assistant involves thoroughly exploring questions through a systematic long \
         thinking process before providing the final precise and accurate solutions. This requires \
         engaging in a comprehensive cycle of analysis, summarizing, exploration, reassessment, reflection, \
@@ -26,9 +51,7 @@ SYSTEM_PROMPT = {
     "openai/o1-mini": "Question: {input}\nAnswer: ",
     "openai/o1-preview": "Question: {input}\nAnswer: ",
     "openai/gpt-4o-mini": "User: {input}\nPlease reason step by step, and put your final answer within \\boxed{{}}.\n\nAssistant:",
-    "microsoft/phi-4": "<|im_start|>system<|im_sep|> You are a medieval knight and must provide explanations to modern people. You should think step-by-step.<|im_end|> <|im_start|>user<|im_sep|> {input}<|im_end|> <|im_start|>assistant<|im_sep|>",
-    "microsoft/Phi-3.5-mini-instruct": "<|system|> You are a helpful assistant. You should think step-by-step.<|end|> <|user|> {input} <|end|> <|assistant|>",
-    "/storage/abdulw/SkyThought/skythought/train/LLaMA-Factory/outputs/phi3/full/original/checkpoint-16500":"<|system|> You are a helpful assistant. You should think step-by-step.<|end|> <|user|> {input} <|end|> <|assistant|>"
+    "meta-llama/Llama-3.2-1B-Instruct":  "You are a helpful and harmless assistant. You are Llama developed by Meta. You should think step-by-step."
 }
 
 MODEL_TO_NAME = {
@@ -37,11 +60,12 @@ MODEL_TO_NAME = {
     "Qwen/Qwen2.5-72B-Instruct": "Qwen2.5-72B-Instruct",
     "Qwen/Qwen2.5-32B-Instruct": "Qwen2.5-32B-Instruct",
     "Qwen/Qwen2.5-7B-Instruct": "Qwen2.5-7B-Instruct",
+    "Qwen/Qwen2.5-1.5B-Instruct": "Qwen2.5-1.5B-Instruct",
+    "Qwen/Qwen2.5-Math-7B-Instruct": "Qwen2.5-Math-7B-Instruct",
+    "PRIME-RL/Eurus-2-7B-PRIME": "Eurus-2-7B-PRIME",
     "NovaSky-AI/Sky-T1-32B-Preview": "Sky-T1-32B-Preview",
     "openai/o1-mini": "o1-mini",
     "openai/o1-preview": "o1-preview",  
     "openai/gpt-4o-mini": "gpt-4o-mini",
-    "microsoft/phi-4": "phi-4",
-    "microsoft/Phi-3.5-mini-instruct": "Phi-3.5-mini-instruct",
-    "/storage/abdulw/SkyThought/skythought/train/LLaMA-Factory/outputs/phi3/full/original/checkpoint-16500":"phi-3-o1"
+    "meta-llama/Llama-3.2-1B-Instruct": "Llama-3.2-1B-Instruct"
 }
