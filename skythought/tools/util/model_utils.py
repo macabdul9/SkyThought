@@ -26,6 +26,9 @@ SYSTEM_PROMPT = {
     "openai/o1-mini": "Question: {input}\nAnswer: ",
     "openai/o1-preview": "Question: {input}\nAnswer: ",
     "openai/gpt-4o-mini": "User: {input}\nPlease reason step by step, and put your final answer within \\boxed{{}}.\n\nAssistant:",
+    "microsoft/phi-4": "<|im_start|>system<|im_sep|> You are a medieval knight and must provide explanations to modern people. You should think step-by-step.<|im_end|> <|im_start|>user<|im_sep|> {input}<|im_end|> <|im_start|>assistant<|im_sep|>",
+    "microsoft/Phi-3.5-mini-instruct": "<|system|> You are a helpful assistant. You should think step-by-step.<|end|> <|user|> {input} <|end|> <|assistant|>",
+    "/storage/abdulw/SkyThought/skythought/train/LLaMA-Factory/outputs/phi3/full/original/checkpoint-16500":"<|system|> You are a helpful assistant. You should think step-by-step.<|end|> <|user|> {input} <|end|> <|assistant|>"
 }
 
 MODEL_TO_NAME = {
@@ -38,4 +41,7 @@ MODEL_TO_NAME = {
     "openai/o1-mini": "o1-mini",
     "openai/o1-preview": "o1-preview",  
     "openai/gpt-4o-mini": "gpt-4o-mini",
+    "microsoft/phi-4": "phi-4",
+    "microsoft/Phi-3.5-mini-instruct": "Phi-3.5-mini-instruct",
+    "/storage/abdulw/SkyThought/skythought/train/LLaMA-Factory/outputs/phi3/full/original/checkpoint-16500":"phi-3-o1"
 }
